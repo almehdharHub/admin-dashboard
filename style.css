@@ -99,7 +99,7 @@ button {
   grid-area: main;
   background-color: lightgray;
   display: grid;
-  grid-template-columns: 66% 34%;
+  grid-template-columns: 70% 30%;
   grid-template-rows: 50% 50%;
   grid-template-areas:
     "projects announcement"
@@ -235,6 +235,34 @@ li {
 }
 #announcement {
   grid-area: announcement;
+}
+#announcement > div {
+  width: 90%;
+  height: 200px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 10px;
+}
+#announcement > div > div {
+  /* height: 25%; */
+  border-bottom: black 1px solid;
+  margin: 5px;
+  width: 100%;
+}
+#announcement > div > div:last-child {
+  border-bottom: none;
+}
+.announcement-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+.announcement-description {
+  font-size: 12px;
 }
 #trending {
   grid-area: trending;
