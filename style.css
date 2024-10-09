@@ -3,10 +3,10 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  background-color: black;
 }
 * {
   box-sizing: border-box;
-  /* outline: red 1px solid; */
 }
 
 #dashboard {
@@ -39,6 +39,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 20px;
 }
 
 #search-field {
@@ -151,7 +152,8 @@ svg {
   fill: white;
 }
 #header svg,
-#projects svg {
+#projects svg,
+#trending svg {
   fill: black;
 }
 #user-img {
@@ -242,14 +244,10 @@ li {
   background-color: white;
   border-radius: 5px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+
   margin-right: 10px;
 }
 #announcement > div > div {
-  /* height: 25%; */
   border-bottom: black 1px solid;
   margin: 5px;
   width: 100%;
@@ -258,12 +256,62 @@ li {
   border-bottom: none;
 }
 .announcement-title {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
+  margin-bottom: 0;
 }
 .announcement-description {
   font-size: 12px;
+  margin-top: 5px;
 }
 #trending {
   grid-area: trending;
+}
+#trending > div {
+  width: 90%;
+  height: 200px;
+  background-color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 15px;
+}
+#trending > div > div {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "user1"
+    "user2"
+    "user3"
+    "user4";
+}
+.text-center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#user1 {
+  grid-area: user1;
+}
+#user2 {
+  grid-area: user2;
+}
+#user3 {
+  grid-area: user3;
+}
+#user4 {
+  grid-area: user4;
+}
+.username {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.bio {
+  font-size: 12px;
+  margin: 0;
 }
